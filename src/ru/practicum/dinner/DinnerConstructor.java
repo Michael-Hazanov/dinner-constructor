@@ -6,7 +6,6 @@ import java.util.Random;
 
 public class DinnerConstructor {
     HashMap<String, ArrayList<String>> dishesByCategory;
-    ArrayList<String> dishesToCategory;
     Random random = new Random();
 
     DinnerConstructor() {
@@ -14,7 +13,7 @@ public class DinnerConstructor {
     }
 
     void saveDishByCategory(String dishType, String dishName) {
-        if (dishesByCategory.containsKey(dishType)) {
+        if (checkType(dishType)) {
             ArrayList<String> dishByCategory;
             dishByCategory = dishesByCategory.get(dishType);
             dishByCategory.add(dishName);
@@ -29,6 +28,7 @@ public class DinnerConstructor {
     void makeComboDinner(int numberOfCombos, ArrayList<String> typeOfDishes) {
         String nameOfTheDish;
         ArrayList<String> comboLunch;
+        ArrayList<String> dishesToCategory;
 
         for (int i = 0; i < numberOfCombos; i++) {
             comboLunch = new ArrayList<>();
