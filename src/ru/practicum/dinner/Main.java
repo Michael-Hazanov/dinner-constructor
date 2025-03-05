@@ -51,7 +51,7 @@ public class Main {
     private static void generateDishCombo() {
         System.out.println("Начинаем конструировать обед...");
         if (dinnerConstructor.dishesByCategory.isEmpty()) {
-            System.out.println("Меню пусто, сначала добавте блюда" + "\n");
+            System.out.println("Меню пусто, сначала добавьте блюда" + "\n");
             return;
         }
 
